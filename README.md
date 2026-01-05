@@ -1,45 +1,62 @@
-# Predictive-Healthcare-Modeling
+### README for Predictive Healthcare Analytics: Length of Stay and Billing Predictions
 
-Project Title: Healthcare Analytics Dashboard: Predicting Length of Stay & Billing
+---
 
-Project Overview This project applies predictive analytics to the healthcare sector, specifically forecasting Hospital Length of Stay (LOS) and Billing Amounts based on patient demographics and medical history. By integrating machine learning pipelines with an interactive web dashboard, this tool aims to assist healthcare administrators in optimizing resource allocation and operational planning.
+# Predictive Healthcare Analytics: Length of Stay and Billing Predictions
 
-Key Objectives
+This project delves into the realm of predictive analytics in healthcare, focusing on forecasting hospital length of stay and billing amounts based on patient demographics and medical conditions. By leveraging advanced data analysis and machine learning techniques, we aim to enhance resource allocation, patient care, and operational efficiency in healthcare settings.
 
-Data Integration: Ingest, clean, and merge raw healthcare data for comprehensive analysis.
+## Project Overview
 
-Preprocessing: Implement robust data cleaning (casing correction, typo handling) and datetime conversion for accurate time-series analysis.
+Through the adept application of data analysis and machine learning skills, this analysis aims to achieve the following objectives:
 
-Feature Engineering: Derive critical metrics such as 'Length of Stay' and standardized 'Age Groups'.
+- Import and preprocess data from various file formats.
+- Clean and integrate data from multiple sources to facilitate a comprehensive analysis.
+- Utilize string and date manipulation techniques to ensure data accuracy and extract meaningful insights.
+- Build predictive models to estimate hospital length of stay and billing amounts.
+- Develop an interactive dashboard to provide real-time predictions and support decision-making.
 
-Predictive Modeling: Develop Linear Regression models to estimate costs and duration of hospitalization.
+## Tools and Techniques
 
-Deployment: Launch a real-time, interactive Dash application for end-user accessibility.
+The project relies on the proficient use of various tools and packages commonly employed by data analysts and scientists. The utilization of these tools reflects the significance of data analysis in today's data-driven world:
 
-Technology Stack
+- **Pandas**: For data manipulation, cleaning, and analysis.
+- **NumPy**: For numerical computing and array operations.
+- **Scikit-learn**: For building and evaluating machine learning models.
+- **Matplotlib** and **Seaborn**: For data visualization.
+- **Dash by Plotly**: For creating interactive dashboards.
 
-Data Processing: Pandas, NumPy
+## Methodology
 
-Modeling: Scikit-learn (Pipelines, OneHotEncoder, LinearRegression)
+### Data Preprocessing
 
-Visualization: Matplotlib, Seaborn, Plotly
+- **Data Cleaning**: Corrected inconsistent casing in columns and handled missing values.
+- **Datetime Conversion**: Converted 'Date of Admission' and 'Discharge Date' to datetime format.
+- **Feature Engineering**: Created 'Length of Stay' and categorized 'Age Group'.
 
-Deployment: Dash by Plotly (Bootstrap Components)
+### Exploratory Data Analysis
 
-Methodology
+- **Descriptive Analysis**: Summarized numerical and categorical features.
+- **Bivariate Analysis**: Explored relationships between variables using scatter plots and correlation coefficients.
 
-Data Wrangling: ADDressed data quality issues, including standardizing inconsistent string casing and resolving specific entry errors (e.g., "United Healthcare" typos).
+### Model Building
 
-Exploratory Data Analysis (EDA): Conducted univariate and bivariate analysis to identify correlations between age, medical conditions, and billing trends using scatter plots and correlation matrices.
+- **Feature Selection**: Identified relevant features for predicting length of stay and billing amount.
+- **Categorical Encoding**: Applied one-hot encoding to categorical variables.
+- **Linear Regression**: Built and trained models to predict target variables.
+- **Model Evaluation**: Assessed models using Mean Absolute Error (MAE).
 
-Model Architecture: Utilized Scikit-learn pipelines to streamline preprocessing (One-Hot Encoding) and model fitting.
+### Dashboard
 
-Evaluation: Models were assessed using Mean Absolute Error (MAE) to quantify prediction accuracy.
+Developed an interactive dashboard using Dash by Plotly to provide real-time predictions for length of stay and billing amounts. The dashboard allows users to input parameters and obtain actionable insights, facilitating data-driven decision-making in hospitals.
 
-Results & Dashboard The analysis culminated in a Dash web application where users can input patient details (Age, Condition, Admission Type) to receive instant predictions.
+## Findings
 
-Billing Model Performance: MAE of ~$12,189.
+The predictive models yielded several key insights:
+- **Length of Stay**: Influenced by age, medical condition, and admission type.
+- **Billing Amount**: Affected by age group and medical condition, with chronic conditions and advanced age leading to higher costs.
+- **Model Accuracy**: Achieved reasonable prediction accuracy with MAEs of 12189.28 for billing amount and 7.48 days for length of stay.
 
-Length of Stay Performance: MAE of ~7.5 days.
+## Conclusions and Recommendations
 
-Conclusion This project demonstrates how linear regression models can effectively translate raw hospital data into actionable operational insights. Future iterations could improve accuracy by incorporating non-linear models (e.g., Random Forest) or expanding the feature set.
+This project demonstrates the potential of predictive analytics in healthcare to enhance decision-making and operational efficiency. By leveraging linear regression models, we can predict crucial outcomes like length of stay and billing amounts, providing valuable insights for healthcare providers. It is recommended that hospitals implement predictive analytics to support strategic planning and daily operations. Future work could explore integrating more advanced machine learning algorithms and expanding the dataset for even more accurate predictions.
