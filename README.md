@@ -1,100 +1,50 @@
 # Predictive-Healthcare-Modeling
 
-Healthcare Data Analysis & Prediction Dashboard
-📌 Project Overview
-This project provides an end-to-end analysis of a healthcare dataset, focusing on patient demographics, billing patterns, and hospital stay durations. It moves from data cleaning and Exploratory Data Analysis (EDA) to Machine Learning, culminating in an interactive Dash web application that predicts Length of Stay and Billing Amount based on patient criteria.
+Here are a few ways to modify the content, depending on the tone you want to achieve (e.g., professional/academic for GitHub, or concise for a portfolio).
 
-Data Preprocessing
-Before modeling, the raw data undergoes several cleaning and formatting steps:
+Option 1: Professional & Technical (Best for GitHub/Documentation)
+This version tightens the language, uses stronger verbs, and highlights the specific technical implementation found in your code.
 
-Data Loading: The dataset is loaded using Pandas.
+Project Title: Healthcare Analytics Dashboard: Predicting Length of Stay & Billing
 
-Date Conversion: Date of Admission and Discharge Date columns are converted to datetime objects to facilitate time-based calculations.
+Project Overview This project applies predictive analytics to the healthcare sector, specifically forecasting Hospital Length of Stay (LOS) and Billing Amounts based on patient demographics and medical history. By integrating machine learning pipelines with an interactive web dashboard, this tool aims to assist healthcare administrators in optimizing resource allocation and operational planning.
 
-Categorical Handling: Inconsistent casing in text columns (e.g., 'Gender', 'Hospital') and specific typos (e.g., correcting "unitedhealthcare") are addressed to ensure uniformity.
+Key Objectives
 
-Feature Engineering
-New features were derived from the existing data to improve model accuracy:
+Data Integration: Ingest, clean, and merge raw healthcare data for comprehensive analysis.
 
-Length of Stay: Calculated as the difference in days between the Discharge Date and the Date of Admission.
+Preprocessing: Implement robust data cleaning (casing correction, typo handling) and datetime conversion for accurate time-series analysis.
 
-Python
+Feature Engineering: Derive critical metrics such as 'Length of Stay' and standardized 'Age Groups'.
 
-df['Length of Stay'] = (df['Discharge Date'] - df['Date of Admission']).dt.days
-Age Group: Patients were categorized into age groups to capture broader trends in billing and recovery time.
+Predictive Modeling: Develop Linear Regression models to estimate costs and duration of hospitalization.
 
-Child: < 18
+Deployment: Launch a real-time, interactive Dash application for end-user accessibility.
 
-Young Adult: 18–29
+Technology Stack
 
-Adult: 30–49
+Data Processing: Pandas, NumPy
 
-Middle Aged: 50–64
+Modeling: Scikit-learn (Pipelines, OneHotEncoder, LinearRegression)
 
-Senior: 65+
+Visualization: Matplotlib, Seaborn, Plotly
 
-Model Creation
-Two separate Linear Regression models were created using scikit-learn pipelines. These pipelines ensure that preprocessing steps like encoding are automatically applied to new data.
+Deployment: Dash by Plotly (Bootstrap Components)
 
-1. Billing Amount Prediction Model
-Target Variable: Billing Amount
+Methodology
 
-Features Used:
+Data Wrangling: ADDressed data quality issues, including standardizing inconsistent string casing and resolving specific entry errors (e.g., "United Healthcare" typos).
 
-Age Group (Categorical)
+Exploratory Data Analysis (EDA): Conducted univariate and bivariate analysis to identify correlations between age, medical conditions, and billing trends using scatter plots and correlation matrices.
 
-Medical Condition (Categorical)
+Model Architecture: Utilized Scikit-learn pipelines to streamline preprocessing (One-Hot Encoding) and model fitting.
 
-Pipeline Steps:
+Evaluation: Models were assessed using Mean Absolute Error (MAE) to quantify prediction accuracy.
 
-One-Hot Encoding: Converts categorical variables (Age Group, Medical Condition) into numeric binary vectors.
+Results & Dashboard The analysis culminated in a Dash web application where users can input patient details (Age, Condition, Admission Type) to receive instant predictions.
 
-Linear Regression: Fits a linear equation to predict the continuous billing amount.
+Billing Model Performance: MAE of ~$12,189.
 
-2. Length of Stay Prediction Model
-Target Variable: Length of Stay
+Length of Stay Performance: MAE of ~7.5 days.
 
-Features Used:
-
-Age (Numerical)
-
-Medical Condition (Categorical)
-
-Admission Type (Categorical: e.g., Emergency, Elective)
-
-Pipeline Steps:
-
-One-Hot Encoding: Applied to Medical Condition and Admission Type.
-
-Linear Regression: Fits a linear equation to predict the number of days a patient will stay.
-
-Model Evaluation
-The models are evaluated using Mean Absolute Error (MAE), which measures the average magnitude of errors in the predictions.
-
-The data is split into training (80%) and testing (20%) sets using train_test_split to ensure the model is tested on unseen data.
-
-Interactive Dashboard
-The project includes a Dash web application (dash, dash_bootstrap_components) that allows users to input patient details and receive real-time predictions.
-
-Inputs: User selects Age, Medical Condition, Admission Type, and Age Group.
-
-Outputs: The app displays the predicted "Length of Stay" (in days) and "Billing Amount" (in USD).
-
-Dependencies
-To run this project, the following libraries are required:
-
-pandas
-
-numpy
-
-scikit-learn
-
-matplotlib
-
-seaborn
-
-plotly
-
-dash
-
-dash-bootstrap-components
+Conclusion This project demonstrates how linear regression models can effectively translate raw hospital data into actionable operational insights. Future iterations could improve accuracy by incorporating non-linear models (e.g., Random Forest) or expanding the feature set.
