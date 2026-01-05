@@ -1,10 +1,5 @@
 # Predictive-Healthcare-Modeling
 
-Here are a few ways to modify the content, depending on the tone you want to achieve (e.g., professional/academic for GitHub, or concise for a portfolio).
-
-Option 1: Professional & Technical (Best for GitHub/Documentation)
-This version tightens the language, uses stronger verbs, and highlights the specific technical implementation found in your code.
-
 Project Title: Healthcare Analytics Dashboard: Predicting Length of Stay & Billing
 
 Project Overview This project applies predictive analytics to the healthcare sector, specifically forecasting Hospital Length of Stay (LOS) and Billing Amounts based on patient demographics and medical history. By integrating machine learning pipelines with an interactive web dashboard, this tool aims to assist healthcare administrators in optimizing resource allocation and operational planning.
